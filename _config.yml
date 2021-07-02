@@ -1,0 +1,65 @@
+title: CBS Science Club
+author:
+  name: CBS Science Club
+  email: science.club@cbs.ac.in
+description: > # this means to ignore newlines until "show_excerpts:"
+  CEBS was conceived to provide students with a sustainable academic and research
+  environment within the country. The Club's intentions resonate with the motive
+  of the Center. We are a team of student volunteers from different years and
+  streams at the centre, and through our events we take an active part in building
+  that environment and integrating the community. Our sessions also motivate
+  independent pursuit of knowledge, and strengthen the relationship of the community
+  with the world of research.
+
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    twitter: ScienceClubCBS
+    #github:  jekyll
+    # devto: jekyll
+    # dribbble: jekyll
+    facebook: cbsscienceclub
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    youtube: CBS Science Club
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

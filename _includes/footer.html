@@ -1,0 +1,38 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <div class="social-links">
+          {%- include social.html -%}
+        </div>  <br><br><br>
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
+      <p style="color:black;" >
+      UM-DAE Centre for Excellence in Basic Sciences <br>
+      "Nalanda", Opp Nano Sciences Building,<br>
+      University of Mumbai, Vidyanagari, <br>
+      Mumbai 400098, India.</p>
+      <p>Website: <a href="https://cbs.ac.in" target="_blank">https://cbs.ac.in</a></p>
+      </div>
+
+      <div class="footer-col">
+        <p style="color:black;" >{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</footer>
