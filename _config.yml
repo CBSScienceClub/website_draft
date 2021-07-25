@@ -3,14 +3,7 @@ author:
   name: CBS Science Club
   email: science.club@cbs.ac.in
 description: > # this means to ignore newlines until "show_excerpts:"
-  CEBS was conceived to provide students with a sustainable academic and research
-  environment within the country. The Club's intentions resonate with the motive
-  of the Center. We are a team of student volunteers from different years and
-  streams at the centre, and through our events we take an active part in building
-  that environment and integrating the community. Our sessions also motivate
-  independent pursuit of knowledge, and strengthen the relationship of the community
-  with the world of research.
-
+  Short description of the website
 
 show_excerpts: false # set to true to show excerpts on the homepage
 

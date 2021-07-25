@@ -145,9 +145,12 @@
 .contact-list{
   color: black;
 }
-.footer-col-wrapper,
+.footer-col-wrapper{
+  @include relative-font-size(.9380);
+
+}
 .social-links {
-  @include relative-font-size(.9375);
+  @include relative-font-size(.9380);
   float: left;
   color: $brand-color;
 }
