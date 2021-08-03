@@ -14,10 +14,13 @@ $spacing-unit:     30px !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    960px !default;
+$content-width:    980px !default;
 
 $on-palm:          750px !default;
 $on-laptop:        800px !default;
+
+// when to switch the navbar to menu button
+$nav-button: 880px;
 
 $on-medium:        $on-palm !default;
 $on-large:         $on-laptop !default;
