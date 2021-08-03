@@ -2,15 +2,14 @@
 layout: default
 title: Gallery
 ---
-<!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-body {
-  font-family: Arial;
-  margin: 0;
+
+@media only screen and (min-width: 900px) {
+  .mySlides {
+    height: 600px;
+  }
 }
+
 
 img {
   vertical-align: middle;
@@ -23,11 +22,10 @@ img {
 
 /* Hide the images by default */
 .mySlides {
-  width:900px;
-  height:600px;
+  width:auto;
   display: none;
   border: none;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 /*img to stay same size*/
 img.mySlides {
@@ -64,7 +62,7 @@ img.mySlides {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 
@@ -189,6 +187,7 @@ div.scrollmenu img {
   </div>
 </div>
 
+</body>
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -219,6 +218,3 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-
-</body>
-</html>
