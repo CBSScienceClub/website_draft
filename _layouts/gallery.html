@@ -1,0 +1,220 @@
+---
+layout: default
+title: Gallery
+---
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  width:900px;
+  height:600px;
+  display: none;
+  border: none;
+  margin-bottom: 25px;
+}
+/*img to stay same size*/
+img.mySlides {
+  object-fit: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Add a transparency effect for thumnbail images */
+.listimg {
+  opacity: 0.6;
+}
+
+.active,
+.listimg:hover {
+  opacity: 1;
+}
+
+/* scrolling for images in the bottom*/
+div.scrollmenu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollmenu::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollmenu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+div.scrollmenu img {
+  padding-bottom: 0;
+  padding-left: 6px;
+  padding-right: 0px;
+  padding-top: 0;
+  width: 150px;
+  height: 150px;
+}
+</style>
+
+<body>
+
+{%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+
+<div class="container">
+  <div class="imgcontainer" >
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_1.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_5.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_2.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_7.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_8.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_6.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_9.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_10.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_11.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_12.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_13.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+
+    <div class="mySlides">
+      <img src="/assets/img/gallery/img_14.jpeg" style="width:100%;   box-shadow: 0 4px 8px 0;">
+    </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+  <div class="scrollmenu">
+        <img class="listimg cursor" src="/assets/img/gallery/img_1.jpeg" style="width:100%" onclick="currentSlide(1)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_5.jpeg" style="width:100%" onclick="currentSlide(2)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_2.jpeg" style="width:100%" onclick="currentSlide(3)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_7.jpeg" style="width:100%" onclick="currentSlide(4)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_8.jpeg" style="width:100%" onclick="currentSlide(5)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_6.jpeg" style="width:100%" onclick="currentSlide(6)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_9.jpeg" style="width:100%" onclick="currentSlide(7)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_10.jpeg" style="width:100%" onclick="currentSlide(8)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_11.jpeg" style="width:100%" onclick="currentSlide(9)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_12.jpeg" style="width:100%" onclick="currentSlide(10)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_13.jpeg" style="width:100%" onclick="currentSlide(11)" >
+        <img class="listimg cursor" src="/assets/img/gallery/img_14.jpeg" style="width:100%" onclick="currentSlide(12)" >
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("listimg");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
