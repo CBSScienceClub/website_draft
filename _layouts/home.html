@@ -1,3 +1,91 @@
 ---
 layout: default
 ---
+<style media="screen">
+
+ .future {
+   padding-top: 16px;
+   padding-right: 16px;
+   padding-bottom: 16px;
+  }
+ .announcement {
+   background-color: rgba(156, 255, 160, 1);
+   border-radius: 8px;
+   margin-bottom: 10px;
+ }
+ #bannertext{
+   font-size: 2.1em;
+   color: black;
+   margin: 10px;
+
+  }
+
+ .r-event{
+   text-align: left;
+   margin-top: 15px;
+   padding-top: 16px;
+   padding-right: 16px;
+   padding-bottom: 16px;
+    }
+
+</style>
+
+
+
+
+{% for item in site.data.home.banner %}
+  {%if item.active == true %}
+    <div class="announcement">
+      <p id="bannertext"> {{item.text}} </a></p>
+    </div>
+  {% endif %}
+{% endfor %}
+
+{% for item in site.data.home.upcoming %}
+  {%if item.active == true %}
+  <div class="future"style="">
+    <h3 style=" font-size: 2.25em; color: black;">Upcoming session</h3>
+    <div >
+      {%if item.iframeactive == true %}
+        <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.zero.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; padding-right: 15px;"></iframe>
+      {% endif %}
+      <div>
+        <h2 style="margin-bottom: 10px;">{{ site.data.home.zero.h2 }}</h2>
+        <h3 > {{ site.data.home.zero.h3 }} </h3>
+      </div>
+    </div>
+  </div>
+  <hr style="margin-bottom: 40px;">
+  {% endif %}
+{% endfor %}
+<div class="recentevents">
+  <h3 style=" font-size: 2.25em; color: black;">Recent Events </h3>
+
+  {%- if site.data.home.recent_eventno >= 1 -%}
+  <div class="r-event">
+    <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.one.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; padding-right: 15px;"></iframe>
+    <div>
+      <h2 style="margin-bottom: 10px;">{{ site.data.home.one.h2 }}</h2>
+      <h3 > {{ site.data.home.one.h3 }} </h3>
+    </div>
+  </div>
+  {%- endif -%}
+
+  {%- if site.data.home.recent_eventno >= 2 -%}
+  <hr style="margin:15px;">
+  <div class="r-event">
+    <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.two.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; padding-right: 15px;"></iframe>
+    <h2>{{ site.data.home.two.h2 }}</h2>
+    <h3>{{ site.data.home.two.h3 }}</h3>
+  </div>
+  {%- endif -%}
+  {%- if site.data.home.recent_eventno == 3 -%}
+  <hr style="margin:15px;">
+  <div class="r-event">
+  <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.three.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: left; padding-right: 15px;"></iframe>
+  <h2>{{ site.data.home.three.h2 }}</h2>
+  <h3>{{ site.data.home.three.h3 }}</h3>
+  </div>
+  {%- endif -%}
+
+</div>
