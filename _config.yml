@@ -3,7 +3,7 @@ author:
   name: CBS Science Club
   email: science.club@cbs.ac.in
 description: > # this means to ignore newlines until "show_excerpts:"
-  Short description of the website
+  
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
