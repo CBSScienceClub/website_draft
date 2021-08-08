@@ -1,3 +1,90 @@
+---
+layout: default
+---
+<style media="screen">
+/* this is to switch the top two */
+
+@media only screen and (min-width: 925px) {
+
+
+  .imagebox {
+    width: 45%;
+    float: left;
+    margin-top: 12px;
+  }
+  img.topimg{
+    width: 96%;
+  }
+
+  .textbox {
+    text-align: justify;
+  }
+
+
+}
+/* these 3 are to manage the event types and switch appropriately */
+@media only screen and (min-width: 960px) {
+
+  .grid_container {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+  }
+  .grid_item {
+    padding: 3px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 960px) and (min-width: 680px) {
+
+  .grid_container {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+  }
+  .grid_item {
+    padding: 3px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+  .grid_container {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr;
+    padding: 3px;
+  }
+  .grid_item {
+    padding: 3px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+}
+
+/* styles for the content in the event types */
+.events_img{
+  padding-top: 5px;
+}
+p.text{
+  text-align: justify;
+  font-size: 16px;
+}
+h3.text{
+  text-align: center;
+}
+
+</style>
+
 <span style="  margin-bottom: 25px;">
   <h1>About CEBS</h1>
   <div class="about_container">
@@ -25,21 +112,21 @@
 
 <div class="grid_container">
   <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/rendezvous.jpg" alt="baithak" style="width:100%">
+    <img class="events_img" src="/assets/img/about/rendezvous.jpg" alt="rendezvous" style="width:100%">
     <div class="event_text">
       <h3 class="text">Rendezvous</h1>
       <p class="text">In these sessions we invite researchers and host a lively dialogue of students with them. The conversation often begins around a central scientific theme in an informal and comfortable setting. We facilitate and encourage students to ask questions, which bring out more elaborate perspectives from the discussion. </p>
     </div>
   </div>
   <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/open_mic.jpg" alt="baithak" style="width:100%">
+    <img class="events_img" src="/assets/img/about/open_mic.jpg" alt="open_mic" style="width:100%">
     <div class="event_text">
       <h3 class="text">Open mic</h1>
       <p class="text">Open Mics provide students with an opportunity to explore their scientific interests and share them with the community. The session begins with 5-6 students briefly introducing a topic of their interest. This is followed by a discussion session, where the speakers elaborate on their topic with smaller groups of students in greater depth. </p>
     </div>
   </div>
   <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/interactive_session.jpg" alt="baithak" style="width:100%">
+    <img class="events_img" src="/assets/img/about/interactive_session.jpg" alt="interactive_session" style="width:100%">
     <div class="event_text">
       <h3 class="text">Interactive session</h1>
       <p class="text">Here we invite researchers and have free-flowing conversations with them on a variety of topics. For example, we try to understand the problems certain sections of our society are facing and how we can try to solve them. We also talk about their impressions and experiences throughout their journey in academia.</p>
@@ -53,17 +140,16 @@
     </div>
   </div>
   <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/counselling.png" alt="baithak" style="width:100%">
+    <img class="events_img" src="/assets/img/about/counselling.png" alt="counselling" style="width:100%">
     <div class="event_text">
       <h3 class="text">Counselling</h1>
       <p class="text">We have had a variety of such events in the past, where we invite some of our professors to advise us all as to how we can make the best utilization of our academic opportunities. We talk about how we can build our interest in science and research, the academic life ahead of our current program, and so on.</p>
     </div>
   </div>
   <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/student_talk.jpg" alt="baithak" style="width:100%">
+    <img class="events_img" src="/assets/img/about/student_talk.jpg" alt="student_talk" style="width:100%">
     <div class="event_text">
       <h3 class="text">Student talks</h1>
       <p class="text">Baithak is a unique platform for students to express their thoughts and feelings. It provides us with an opportunity to understand fellow students at a more personal level. The format is very similar to open mics, except that what students want to share need not be prepared beforehand.</p>
     </div>
   </div>
-</div>

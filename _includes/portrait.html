@@ -1,0 +1,113 @@
+<html>
+<style>
+.active, .menu_button:hover {
+  background-color: hotpink;
+}
+.active, .submenu_button:hover {
+  background-color: hotpink;
+}
+.menu_button {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.submenu_button {
+float: center;
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.content {
+  height: 370px;
+  padding: 18px;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu  a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: right;
+  width: 50%;
+  padding: 0 20px;
+  overflow:auto;
+}
+.poster {
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+}
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+
+
+
+<div class="poster">
+<img src="/assets/img/event_posters/harrygray.png" style="width: 125%;">
+</div>
+
+
+<div class="main content">
+
+<p><button class="submenu_button" onclick="abstract()" >Abstract</button>
+<button class="submenu_button" onclick="about()">About speaker</button>
+<button onclick="gallery()" class="submenu_button">Gallery</button>
+<button onclick="discussion()" class="submenu_button">Discussion</button></p>
+<div id="written" width="80%" overflow = "scroll" >The dianionic oxo ligand occupies a very special place in coordination chemistry, owing to its ability to donate pi electrons to stabilize high oxidation states of metals. The ligand field theory of multiple bonding in metal-oxos predicts that there must be an “oxo wall” between Fe-Ru-Os and Co-Rh-Ir in the periodic table. Metal-oxos on the left side of the wall are reactive intermediates in three of the most important chemical reactions on planet Earth: water oxidation to oxygen in photosystem II; oxygen reduction to water in the terminal enzyme of the respiratory chain (cytochrome oxidase); and hydrocarbon oxygenation catalyzed by cytochrome P450. As many high-valent metal-oxos are very powerful oxidants, we might expect that living cells full of organic molecules would suffer from oxidative destruction. The question is: how are oxidative enzymes protected? Jay Winkler and I have suggested that an uncoupled high-valent iron-oxo intermediate would be reduced by hole transfer to a tryptophan or tyrosine residue in a Trp/Tyr chain extending from the active site to the enzyme surface. Electron transfer to the terminal residue in the chain could then protect the enzyme from oxidative degradation.
+</div>
+
+
+<script>
+function abstract(abs) {
+  var x = document.getElementById("written");
+  x.innerHTML = "The dianionic oxo ligand occupies a very special place in coordination chemistry, owing to its ability to donate pi electrons to stabilize high oxidation states of metals. The ligand field theory of multiple bonding in metal-oxos predicts that there must be an “oxo wall” between Fe-Ru-Os and Co-Rh-Ir in the periodic table. Metal-oxos on the left side of the wall are reactive intermediates in three of the most important chemical reactions on planet Earth: water oxidation to oxygen in photosystem II; oxygen reduction to water in the terminal enzyme of the respiratory chain (cytochrome oxidase); and hydrocarbon oxygenation catalyzed by cytochrome P450. As many high-valent metal-oxos are very powerful oxidants, we might expect that living cells full of organic molecules would suffer from oxidative destruction. The question is: how are oxidative enzymes protected? Jay Winkler and I have suggested that an uncoupled high-valent iron-oxo intermediate would be reduced by hole transfer to a tryptophan or tyrosine residue in a Trp/Tyr chain extending from the active site to the enzyme surface. Electron transfer to the terminal residue in the chain could then protect the enzyme from oxidative degradation.";
+}
+function about(abo) {
+  var x = document.getElementById("written");
+  x.innerHTML = "Prof. Harry Barkus Gray is the Arnold O. Beckman Professor of Chemistry at the California Institute of Technology, U.S.A. He received his B.S. in Chemistry from Western Kentucky University in 1957. He began his work in inorganic chemistry (a very new field at that time) at Northwestern University, where he earned his Ph.D. on the mechanisms and reactions of platinum complexes in 1960 working under the guidance of Prof. Fred Basolo and Prof. Ralph Pearson. After that, he spent a year (1960–61) as an NSF Postdoctoral Fellow working with Prof. C. J. Ballhausen at the University of Copenhagen, where he pioneered the development of ligand field theory. Subsequently, he relocated to New York City to take up a faculty appointment at Columbia University. He served as an Assistant Professor from 1961 to 1963 and as an Associate Professor from 1963 to 1965. In 1966, he became the founding director of the Beckman Institute at Caltech. <br> Prof. Gray's research interests address a wide range of fundamental problems in inorganic chemistry, biochemistry, and biophysics. Electron transfer (ET) chemistry is a unifying theme for much of this research. <br>Over the past twenty-five years, the Gray group has been measuring the kinetics of long-range ET reactions in metallo-proteins labelled with inorganic redox reagents. Currently, his research is aimed at understanding how intermediate protein radicals accelerate long-range ET. In collaboration with Prof. Jay R. Winkler of the Beckman Institute at Caltech, he has developed new techniques for measuring ET rates in crystals of Ru-, Os-, and Re-modified azurins, as well as crystals of Fe(III)-cytochrome c doped with Zn(II)-cytochrome c. This method of integrating photosensitizers into protein crystals has provided a powerful new tool for studying biochemical reaction dynamics. The Gray/Winkler group is also using ET chemistry to probe the dynamics of protein folding in cytochrome c. <br> Prof. Harry Gray leads NSF Center for Chemical Innovation in Solar Fuels, which has an outreach activity called the Solar Army. For this mission, hundreds of student volunteers are recruited to search through the periodic table for light absorbers and catalysts that can help turn water into hydrogen fuel, using only sunlight. There are multiple projects within this activity to help this search and educate further, the young minds about solar energy. <br> To know more about the speaker and his activities, click on the links given below.";
+}
+function gallery(gal) {
+  var x = document.getElementById("written");
+  x.innerHTML = "Swapped text!3";
+}
+function discussion(dis) {
+  var x = document.getElementById("written");
+  x.innerHTML = "find the reddit discussion here<br><br>this includes summary and stuff";
+}
+
+</script>
