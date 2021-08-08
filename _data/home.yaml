@@ -1,9 +1,9 @@
 
 banner:
-  - active: false
+  - active: true
     text: "Check out our new blog post  <a href='#'>here! "
 upcoming:
-  - active: false
+  - active: true
     iframeactive: true
 recent_eventno: 3
 zero:
