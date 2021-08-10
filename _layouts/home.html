@@ -36,7 +36,7 @@ layout: default
 {% for item in site.data.home.banner %}
   {%if item.active == true %}
     <div class="announcement">
-      <p id="bannertext"> {{item.text}} </a></p>
+      <p id="bannertext"> {{item.text}} <a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></p>
     </div>
   {% endif %}
 {% endfor %}

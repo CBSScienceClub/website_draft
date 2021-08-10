@@ -1,7 +1,7 @@
 
 banner:
   - active: true
-    text: "Check out our new blog post  <a href='#'>here! "
+    text: "Check out our new blog post  "
 upcoming:
   - active: true
     iframeactive: true
