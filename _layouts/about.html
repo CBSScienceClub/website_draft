@@ -2,85 +2,75 @@
 layout: default
 ---
 <style media="screen">
-/* this is to switch the top two */
+  /* this is to switch the top two */
 
-@media only screen and (min-width: 925px) {
+  @media only screen and (min-width: 925px) {
+    .imagebox {
+      width: 45%;
+      float: left;
+      margin-top: 12px;
+    }
+    .textbox {
+      text-align: justify;
+    }
+  }
+  /* these 3 are to manage the event types and switch appropriately */
 
-
-  .imagebox {
-    width: 45%;
-    float: left;
-    margin-top: 12px;
+  @media only screen and (min-width: 960px) {
+    .grid_container {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      padding: 10px;
+    }
+    .grid_item {
+      padding: 3px;
+      font-size: 30px;
+      text-align: center;
+    }
   }
 
+  @media only screen and (max-width: 960px) and (min-width: 680px) {
+    .grid_container {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      padding: 10px;
+    }
+    .grid_item {
+      padding: 3px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
 
-  .textbox {
+  @media only screen and (max-width: 680px) {
+    .grid_container {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr;
+      padding: 3px;
+    }
+    .grid_item {
+      padding: 3px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  /* styles for the content in the event types */
+
+  .events_img {
+    padding-top: 5px;
+  }
+
+  p.text {
     text-align: justify;
+    font-size: 16px;
   }
 
-
-}
-/* these 3 are to manage the event types and switch appropriately */
-@media only screen and (min-width: 960px) {
-
-  .grid_container {
-    display: grid;
-    grid-gap: 12px;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-  }
-  .grid_item {
-    padding: 3px;
-    font-size: 30px;
+  h3.text {
     text-align: center;
   }
-
-}
-
-@media only screen and (max-width: 960px) and (min-width: 680px) {
-
-  .grid_container {
-    display: grid;
-    grid-gap: 12px;
-    grid-template-columns: 1fr 1fr;
-    padding: 10px;
-  }
-  .grid_item {
-    padding: 3px;
-    font-size: 30px;
-    text-align: center;
-  }
-
-}
-
-@media only screen and (max-width: 680px) {
-
-  .grid_container {
-    display: grid;
-    grid-gap: 12px;
-    grid-template-columns: 1fr;
-    padding: 3px;
-  }
-  .grid_item {
-    padding: 3px;
-    font-size: 30px;
-    text-align: center;
-  }
-
-}
-
-/* styles for the content in the event types */
-.events_img{
-  padding-top: 5px;
-}
-p.text{
-  text-align: justify;
-  font-size: 16px;
-}
-h3.text{
-  text-align: center;
-}
-
 </style>
 
 <span style="  margin-bottom: 25px;">
@@ -99,10 +89,10 @@ h3.text{
   <div class="about_container">
     <h1>About the Club</h1>
    <div class="imagebox">
-      <img class='topimg' style="width: 95%;" src="/assets/img/about/about_club.jpeg" alt="about cbs">
+      <img class='topimg' style="width: 95%;" src="/assets/img/about/about_clubs.jpeg" alt="about cbs">
     </div>
     <div class="textbox" style="margin-bottom: 40px;">
-      <p>We are a team of student volunteers from different years and streams, and take an active part in building a safe and inquisitive environment at the institute. Through our sessions we also wish to motivate independent pursuit of knowledge, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.
+      <p><br>We are a team of student volunteers from different years and streams, and take an active part in building a safe and inquisitive environment at the institute. Through our sessions we also wish to motivate independent pursuit of knowledge, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.
     </div>
   </div>
 </span>
@@ -126,15 +116,8 @@ h3.text{
   <div class="grid_item">
     <img class="events_img" src="/assets/img/about/interactive_session.jpg" alt="interactive_session" style="width:100%">
     <div class="event_text">
-      <h3 class="text">Interaction session</h1>
+      <h3 class="text">Interaction</h1>
       <p class="text">Here we invite researchers and have free-flowing conversations with them on a variety of topics. For example, we try to understand the problems certain sections of our society are facing and how we can try to solve them. We also talk about their impressions and experiences throughout their journey in academia.</p>
-    </div>
-  </div>
-  <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/baithak.png" alt="baithak" style="width:100%">
-    <div class="event_text">
-      <h3 class="text">Baithak</h1>
-      <p class="text">Baithak is a unique platform for students to express their thoughts and feelings. It provides us with an opportunity to understand fellow students at a more personal level. The format is very similar to open mics, except that what the students want to share need not be prepared beforehand.</p>
     </div>
   </div>
   <div class="grid_item">
@@ -142,12 +125,5 @@ h3.text{
     <div class="event_text">
       <h3 class="text">Counselling</h1>
       <p class="text">In these sessions we invite some of our professors and students to talk about the various opportunities presented by the institute, and how the students can best utilize them. In other such sessions with our alumni we also discuss the life ahead of our Integrated MSc program.</p>
-    </div>
-  </div>
-  <div class="grid_item">
-    <img class="events_img" src="/assets/img/about/student_talk.jpg" alt="student_talk" style="width:100%">
-    <div class="event_text">
-      <h3 class="text">Student talks</h1>
-      <p class="text">Baithak is a unique platform for students to express their thoughts and feelings. It provides us with an opportunity to understand fellow students at a more personal level. The format is very similar to open mics, except that what students want to share need not be prepared beforehand.</p>
     </div>
   </div>

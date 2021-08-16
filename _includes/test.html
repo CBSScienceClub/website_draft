@@ -1,140 +1,183 @@
-
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-</style>
-
-<!-- MAIN (Center website) -->
-<div class="main">
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('nature')"> rendezvous</button>
-  <button class="btn" onclick="filterSelection('cars')"> open mic</button>
-  <button class="btn" onclick="filterSelection('people')"> informal interaction</button>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  {%- for item in site.data.test -%}
-    <div class="column {{item.type}}">
-      <div class="content">
-        {{item.name}}
-      </div>
-    </div>
-  {%- endfor -%}
-<!-- END GRID -->
-</div>
-
-
-<a href="{{ my_page.url }}/test">when you click "Harry Gray" above it goes to this link with information in this format</a>
-<!-- END MAIN -->
-</div>
-
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+<style media="screen">
+  .glink,
+  .glink:visited,
+  .glink:hover,
+  .glink:active {
+    text-decoration: none;
   }
-}
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
+  @media only screen and (min-width: 960px) {
+    .grid_container {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 10px;
+    }
+    .grid_item {
+      border-radius: 8px;
+      font-size: 16px;
+      text-align: left;
+      border: black solid 1px;
+      transition-duration: 0.3s;
     }
   }
-  element.className = arr1.join(" ");
-}
 
+  @media only screen and (max-width: 960px) and (min-width: 680px) {
+    .grid_container {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      padding: 10px;
+    }
+    .grid_item {
+      border-radius: 8px;
+      padding: 13px;
+      font-size: 16px;
+      text-align: left;
+      border: black solid 1px;
+      transition-duration: 0.3s;
+    }
+  }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+  @media only screen and (max-width: 680px) {
+    .grid_container {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr;
+      padding: 3px;
+    }
+    .grid_item {
+      border-radius: 8px;
+      padding: 13px;
+      font-size: 16px;
+      text-align: left;
+      border: black solid 1px;
+      transition-duration: 0.3s;
+    }
+  }
+  .grid_item:hover{
+    background-color: rgb(117, 234, 241);
+    border: rgb(117, 234, 241) solid 1px;
+  }
+
+  button {
+    background-color: #ffffff;
+    height: 38px;
+    border: none;
+    color: black;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+  }
+
+  button:hover {
+    background-color: #7fe7e4;
+  }
+
+  #page_control {
+    justify-content: center;
+    width: 100%;
+    height: 58px;
+    display: flex;
+    float: right;
+  }
+
+  #input {
+    width: 70%;
+    height: 35px;
+    padding-left: 10px;
+    margin: 4px;
+    border: 1px solid #010101;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 1px;
+  }
+</style>
+<div class="controls">
+  <div>
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="0" data-selected="true">
+    All
+  </button>
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="0" data-to="2">
+    rendezvous
+  </button>
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="2" data-to="4">
+    open mic
+  </button>
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="4">
+    interaction session
+  </button>
+</div>
+<div style="width: 360px;">
+  <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Filter by Title" />
+
+  <button type="button" id="title-clear-btn">Clear</button>
+</div>
+</div>
+
+<!-- generated content -->
+<div class="grid_container" data-jplist-group="data-group-1">
+  {%- for item in site.data.test -%}
+  <div class="grid_item"  data-jplist-item>
+    <a href="#" class="glink" style="color: initial;">
+      <div class="name" style="padding: 13px;"><strong style="font-size: 18px;">{{item.type}}</strong>
+        <br />{{item.name}}</div>
+    </a>
+    <div class="type" style="display: none;">
+      {{item.id}}
+    </div>
+    <div class="title" style="display: none;">
+      {{item.name}}
+    </div>
+  </div>
+  {%- endfor -%}
+  <!-- no results control -->
+  <div data-jplist-control="no-results" data-group="data-group-1" data-name="no-results">
+    No Results Found
+  </div>
+</div>
+<div class="controls1">
+  <div data-jplist-control="pagination" data-group="data-group-1" data-items-per-page="9" data-current-page="0" data-name="pagination1">
+    <div id="page_control">
+      <button type="button" data-type="first">«</button>
+      <button type="button" data-type="prev">‹</button>
+      <div class="jplist-holder" data-type="pages">
+        <button type="button" data-type="page">{pageNumber}</button>
+      </div>
+      <button type="button" data-type="next">›</button>
+      <button type="button" data-type="last">»</button>
+      <!-- items per page select -->
+    </div>
+    <div style="text-align: center; font-size: 14px; margin: none; padding: none;">
+      <select data-type="items-per-page" style="width: 150px; height: 37px; padding-left: 10px; margin: 4px;">
+        <option value="9"> 9 per page </option>
+        <option value="15"> 15 per page </option>
+        <option value="45"> 45 per page </option>
+        <option value="0"> view all </option>
+      </select>
+      <span data-type="info">
+        Page {pageNumber} of {pagesNumber} |
+      </span>
+      <span data-type="info">
+        {startItem} - {endItem} of {itemsNumber}
+      </span>
+    </div>
+  </div>
+</div>
+<script src="/assets/scripts/jplist.min.js"></script>
+<script>
+  jplist.init();
 </script>
