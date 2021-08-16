@@ -1,18 +1,109 @@
-- type: nature"
+- id: 1
+  type: Rendezvous
+  grid: rgb(186, 132, 230);
   name: "Harry Gray"
-- type: cars"
-  name: "Open mic 15"
-- type: people"
-  name: "Informal interaction 12"
-- type: nature
+- id: 3
+  type: Open Mic
+  name: "#15"
+- id: 5
+  type: "Informal interaction"
+  name: "#12"
+- id: 1
+  type: Rendezvous
   name: "Siddartha Mishra"
-- type: cars
-  name: "Open mic 14"
-- type: people
-  name: "Informal interaction 11"
-- type: nature
+- id: 3
+  type: Open Mic
+  name: "#14"
+- id: 5
+  type: "Informal interaction"
+  name: "#5"
+- id: 1
+  type: Rendezvous
   name: "Rama Govindarajan"
-- type: cars
-  name: "Open mic 13"
-- type: people
-  name: "Informal interaction 10"
+- id: 3
+  type: Open Mic
+  name: "#5"
+- id: 5
+  type: "Informal interaction"
+  name: "#10"
+- id: 1
+  type: Rendezvous
+  name: "Harry Gray"
+- id: 3
+  type: Open Mic
+  name: "#15"
+- id: 5
+  type: "Informal interaction"
+  name: "#12"
+- id: 1
+  type: Rendezvous
+  name: "Siddartha Mishra"
+- id: 3
+  type: Open Mic
+  name: "#14"
+- id: 5
+  type: "Informal interaction"
+  name: "#5"
+- id: 1
+  type: Rendezvous
+  name: "Rama Govindarajan"
+- id: 3
+  type: Open Mic
+  name: "#5"
+- id: 5
+  type: "Informal interaction"
+  name: "#10"
+- id: 1
+  type: Rendezvous
+  name: "Harry Gray"
+- id: 3
+  type: Open Mic
+  name: "#15"
+- id: 5
+  type: "Informal interaction"
+  name: "#12"
+- id: 1
+  type: Rendezvous
+  name: "Siddartha Mishra"
+- id: 3
+  type: Open Mic
+  name: "#14"
+- id: 5
+  type: "Informal interaction"
+  name: "#5"
+- id: 1
+  type: Rendezvous
+  name: "Rama Govindarajan"
+- id: 3
+  type: Open Mic
+  name: "#5"
+- id: 5
+  type: "Informal interaction"
+  name: "#10"
+- id: 1
+  type: Rendezvous
+  name: "Harry Gray"
+- id: 3
+  type: Open Mic
+  name: "#15"
+- id: 5
+  type: "Informal interaction"
+  name: "#12"
+- id: 1
+  type: Rendezvous
+  name: "Siddartha Mishra"
+- id: 3
+  type: Open Mic
+  name: "#14"
+- id: 5
+  type: "Informal interaction"
+  name: "#5"
+- id: 1
+  type: Rendezvous
+  name: "Rama Govindarajan"
+- id: 3
+  type: Open Mic
+  name: "#5"
+- id: 5
+  type: "Informal interaction"
+  name: "#10"
